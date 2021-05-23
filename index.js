@@ -1,7 +1,7 @@
 // Code your solution here
 function findMatching(driverArray, string) {
   
-    const result = driverArray.filter(driver => driver === string);
+    const result = driverArray.filter(driver => driver.toLowerCase === string.toLowerCase);
     return result
 }
     // var n = str.startsWith("Hello");
