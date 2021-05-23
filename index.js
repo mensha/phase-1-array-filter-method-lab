@@ -1,13 +1,17 @@
 // Code your solution here
 function findMatching(driverArray, string) {
+    return driverArray.filter(driver => driver.toLowerCase()=== string.toLowerCase());    
   
-    const result = driverArray.filter(driver => driver.toLowerCase === string.toLowerCase);
-    return result
+//   const result = driverArray.filter(driver => driver.toLowerCase()=== string.toLowerCase());
+//   return result <(this could work as well)
+ 
 }
-    // var n = str.startsWith("Hello");
+   
+function fuzzyMatch(driverArray, string)  {
+    return driverArray.filter(driver => driver.startsWith(string))
+}
 
-// const result = words.filter(word => word.length > 6);
-
-// console.log(result);
-// expected output: Array ["exuberant", "destruction", "present"]
-
+function matchName(driverObjects, string) {
+   
+   return driverObjects.filter(driverObject => driverObject.name === string)
+}
